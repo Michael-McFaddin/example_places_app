@@ -29,7 +29,7 @@ class Api::PlacesController < ApplicationController
     if @place.save
       render "show.json.jb"
     else
-      render json: {errors: @contact.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @place.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
